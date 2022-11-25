@@ -1,0 +1,15 @@
+C:\Users\jsalva\source\repos\ValorantOCR\bin\Debug\net6.0\ValorantOCR.exe
+C:\Users\jsalva\source\repos\ValorantOCR\bin\Debug\net6.0\ValorantOCR.deps.json
+C:\Users\jsalva\source\repos\ValorantOCR\bin\Debug\net6.0\ValorantOCR.runtimeconfig.json
+C:\Users\jsalva\source\repos\ValorantOCR\bin\Debug\net6.0\ValorantOCR.dll
+C:\Users\jsalva\source\repos\ValorantOCR\bin\Debug\net6.0\ValorantOCR.pdb
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ValorantOCR.csproj.AssemblyReference.cache
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ValorantOCR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ValorantOCR.AssemblyInfoInputs.cache
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ValorantOCR.AssemblyInfo.cs
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ValorantOCR.csproj.CoreCompileInputs.cache
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ValorantOCR.dll
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\refint\ValorantOCR.dll
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ValorantOCR.pdb
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ValorantOCR.genruntimeconfig.cache
+C:\Users\jsalva\source\repos\ValorantOCR\obj\Debug\net6.0\ref\ValorantOCR.dll
