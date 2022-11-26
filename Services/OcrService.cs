@@ -30,8 +30,6 @@ namespace FortniteOCR.Services
 
             string debug = FortniteOCR.debugMode ? "Yes" : "No";
 
-            _logger.LogInformation($"Debug enabled: {debug}");
-
             while (!stoppingToken.IsCancellationRequested) {
                 try
                 {
