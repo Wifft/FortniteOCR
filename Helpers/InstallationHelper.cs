@@ -6,8 +6,8 @@ namespace FortniteOCR.Helpers
     {
         public static void CheckTimebomb()
         {
-            DateTime expirationDate = DateTime.ParseExact("05/10/2022", "MM/dd/yyyy", CultureInfo.InvariantCulture);
-            if ((DateTime.Now < expirationDate))
+            DateTime expirationDate = DateTime.ParseExact("12/01/2022", "MM/dd/yyyy", CultureInfo.InvariantCulture);
+            if ((DateTime.Now > expirationDate))
             {
                 Console.WriteLine("App expired!");
                 Console.Write("Press ENTER to exit.");

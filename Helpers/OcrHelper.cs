@@ -43,7 +43,7 @@ namespace FortniteOCR.Helpers
         {
             foreach (OcrResult result in results) ProcessLines(gameDecodedInfo, result.Lines.ToList());
 
-            logger.LogDebug("\u001b[37mDEBUG -> " + JsonConvert.SerializeObject(gameDecodedInfo) + "\u001b[1m\u001b[37m");
+            if (FortniteOCR.DEBUG_MODE) logger.LogDebug("\u001b[37mDEBUG -> " + JsonConvert.SerializeObject(gameDecodedInfo) + "\u001b[1m\u001b[37m");
 
             BackendClient.StoreData(observerId, gameDecodedInfo, logger);
         }
@@ -53,7 +53,12 @@ namespace FortniteOCR.Helpers
             foreach (OcrLine line in lines)
             {
                 string lineText = line.Text;
-                gameDecodedInfo.playerName = lineText;
+                gameDecodedInfo.SetPlayerName(lineText);
+            }
+
+            if (lines.Count() == 0)
+            {
+                gameDecodedInfo.SetPlayerName(null);
             }
         }
     }

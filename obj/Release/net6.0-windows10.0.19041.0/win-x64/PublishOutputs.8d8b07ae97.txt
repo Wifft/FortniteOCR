@@ -1,2 +1,0 @@
-C:\Users\jsalva\source\repos\ValorantOCR\bin\Release\net6.0-windows10.0.19041.0\win-x64\publish\ValorantOCR.pdb
-C:\Users\jsalva\source\repos\ValorantOCR\bin\Release\net6.0-windows10.0.19041.0\win-x64\publish\ValorantOCR.exe

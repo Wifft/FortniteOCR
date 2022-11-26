@@ -42,12 +42,17 @@ namespace FortniteOCR.Services
                             .ContinueWith(task => OcrHelper.ProcessResults(gameDecodedInfo, task.Result, observerId, _logger), stoppingToken);
                         gameProcess = GetGameProcess();
 
+                        if (!FortniteOCR.DEBUG_MODE) { 
+                            consoleSpinner.Turn(displayMsg: "\u001b[31m[FortniteOCR by Wifft]\u001b[1m\u001b[37m Gathering player names", sequenceCode: 4);
+                        } 
+
                         await Task.Delay(1000, stoppingToken);
                     }
                 } 
                 catch (Exception e)
                 {
                     _logger.LogError("\u001b[1m\u001b[37mERROR -> " + e.Message + "\u001b[37m");
+                    _logger.LogError("\u001b[1m\u001b[37mERROR -> " + e.StackTrace + "\u001b[37m");
                 }
             };
         }
@@ -59,7 +64,7 @@ namespace FortniteOCR.Services
             Process[] processesList = Process.GetProcesses();
             foreach (Process process in processesList)
             {
-                bool isProcessRunning = process.ProcessName.Equals("FortniteClient-Win64-Shipping");
+                bool isProcessRunning = process.ProcessName.ToLower().Equals("FortniteClient-Win64-Shipping".ToLower());
                 bool processHasWindow = !process.MainWindowHandle.ToString().Equals("0");
                 if (isProcessRunning && processHasWindow) targetProcess = process;
             }

@@ -13,6 +13,8 @@ namespace FortniteOCR
 {
     public static partial class FortniteOCR
     {
+        public const bool DEBUG_MODE = false;
+
         static void Main(string[] args)
         {
             InstallationHelper.CheckTimebomb();

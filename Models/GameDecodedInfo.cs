@@ -8,7 +8,7 @@ namespace FortniteOCR.Models
 
         public void SetPlayerName(string? playerName)
         {
-            this.playerName = playerName ?? "Unknown";
+            this.playerName = playerName;
         }
     }
 }
