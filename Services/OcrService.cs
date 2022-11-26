@@ -28,6 +28,10 @@ namespace FortniteOCR.Services
             _ = uint.TryParse(Console.ReadLine(), out uint observerId);
             _logger.LogInformation("The current observer ID is: " + observerId);
 
+            string debug = FortniteOCR.debugMode ? "Yes" : "No";
+
+            _logger.LogInformation($"Debug enabled: {debug}");
+
             while (!stoppingToken.IsCancellationRequested) {
                 try
                 {
@@ -42,9 +46,7 @@ namespace FortniteOCR.Services
                             .ContinueWith(task => OcrHelper.ProcessResults(gameDecodedInfo, task.Result, observerId, _logger), stoppingToken);
                         gameProcess = GetGameProcess();
 
-                        if (!FortniteOCR.DEBUG_MODE) { 
-                            consoleSpinner.Turn(displayMsg: "\u001b[31m[FortniteOCR by Wifft]\u001b[1m\u001b[37m Gathering player names", sequenceCode: 4);
-                        } 
+                        if (!FortniteOCR.debugMode) consoleSpinner.Turn(displayMsg: "\u001b[31m[FortniteOCR by Wifft]\u001b[1m\u001b[37m Gathering player names", sequenceCode: 4);
 
                         await Task.Delay(1000, stoppingToken);
                     }

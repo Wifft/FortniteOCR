@@ -48,7 +48,7 @@ namespace FortniteOCR.Clients
             HttpResponseMessage response = client.SendAsync(request).Result;
 
             string apiResponse = response.Content.ReadAsStringAsync().Result;
-            if (FortniteOCR.DEBUG_MODE) logger.LogDebug($"DEBUG -> {apiResponse}");
+            if (FortniteOCR.debugMode) logger.LogDebug($"DEBUG -> {apiResponse}");
             
             try
             {

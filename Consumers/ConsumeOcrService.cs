@@ -39,7 +39,7 @@ namespace FortniteOCR.Consumers
         {
             _logger.LogInformation("\u001b[1m\u001b[37FortniteOCR service stopping...\u001b[1m\u001b[37");
 
-            for (int i = 0; i <= 1; i++) File.Delete(Environment.GetEnvironmentVariable("tmp") + $"\\valorant_ocr_game_capture_{i}.jpg");
+            for (int i = 0; i <= 1; i++) File.Delete(Environment.GetEnvironmentVariable("tmp") + $"\\fortnite_ocr_game_capture_{i}.jpg");
 
             await base.StopAsync(stoppingToken);
         }

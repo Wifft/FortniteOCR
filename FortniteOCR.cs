@@ -7,16 +7,18 @@ using FortniteOCR.Consumers;
 using FortniteOCR.Helpers;
 using FortniteOCR.Interfaces;
 using FortniteOCR.Services;
-
+using Windows.UI.WebUI;
 
 namespace FortniteOCR
 {
     public static partial class FortniteOCR
     {
-        public const bool DEBUG_MODE = false;
+        public static bool debugMode = false;
 
         static void Main(string[] args)
         {
+            if (args.Length.Equals(1) && args[0] == "--debug") debugMode = true;  
+
             InstallationHelper.CheckTimebomb();
 
             CreateHostBuilder(args).Build().Run();
